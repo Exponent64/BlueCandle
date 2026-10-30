@@ -35,6 +35,8 @@ jobs:
       matrix:
         recipe:
           - general/recipe-main.yml
+          - general/recipe-nvidia-open.yml
+          - general/recipe-nvidia.yml
 
     steps:
       - name: Build Custom Image
