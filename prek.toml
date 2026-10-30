@@ -1,0 +1,42 @@
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "builtin"
+hooks = [
+    { id = "check-added-large-files" },
+    { id = "detect-private-key" },
+    { id = "end-of-file-fixer" },
+    { id = "trailing-whitespace" },
+]
+
+[[repos]]
+repo = "https://github.com/zizmorcore/zizmor-pre-commit"
+rev = "c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f" # v1.31.1
+hooks = [ { id = "zizmor" } ]
+
+[[repos]]
+repo = "https://github.com/astral-sh/ruff-pre-commit"
+rev = "38bfb07c0c64c304f47eb52090f8288150c77730" # v0.17.1
+hooks = [
+    { id = "ruff-check" },
+    { id = "ruff-format" },
+]
+
+[[repos]]
+repo = "https://github.com/astral-sh/ty-pre-commit"
+rev = "033aa05ea3f6f5f7cd39bcb6a31fd66f6efbed2f" # v0.0.89
+hooks = [
+    { id = "ty", args = ["--isolated"] },
+]
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "shellcheck"
+name = "Shellcheck"
+description = "Shell script linter: https://www.shellcheck.net/"
+entry = "shellcheck"
+language = "system"
+types = ["text"]
+types_or = ["bash", "bats", "shell"]

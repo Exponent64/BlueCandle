@@ -1,0 +1,13 @@
+name: bluecandle-nvidia
+
+description: "nvidia"
+
+base-image: ghcr.io/secureblue/sericea-nvidia-hardened
+image-version: latest
+
+platforms:
+  - linux/amd64
+
+modules:
+  - from-file: common/modules.yml
+  - from-file: common/nvidia.yml

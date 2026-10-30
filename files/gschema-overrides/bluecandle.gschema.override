@@ -1,0 +1,13 @@
+[org.gnome.desktop.interface]
+gtk-theme='adw-gtk3'
+font-antialiasing="rgba"
+
+[org.gnome.desktop.media-handling]
+automount=false
+automount-open=false
+
+[org.gnome.nautilus.preferences]
+show-image-thumbnails='never'
+
+[org.gnome.desktop.thumbnailers]
+disable-all=true
