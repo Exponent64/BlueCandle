@@ -9,7 +9,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```sh
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/exponent64/${IMAGE}:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/exponent64/bluecandle-${IMAGE}:latest
   ```
 - Reboot to complete the rebase:
   ```sh
@@ -17,7 +17,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```sh
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/exponent64/"${IMAGE}":latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/exponent64/bluecandle-${IMAGE}:latest
   ```
 - Reboot again to complete the installation
   ```sh
