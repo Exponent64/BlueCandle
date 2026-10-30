@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # v6.0.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: ["--markdown-linebreak-ext=md,patch"]
+        exclude: "\\.patch$"
+
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f # v1.31.1
+    hooks:
+      - id: zizmor
+        exclude: "^\\.github/workflows/config/linkspector\\.yml$"
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 38bfb07c0c64c304f47eb52090f8288150c77730 # v0.17.1
+    hooks:
+      - id: ruff-check
+      - id: ruff-format
+
+  - repo: https://github.com/astral-sh/ty-pre-commit
+    rev: 033aa05ea3f6f5f7cd39bcb6a31fd66f6efbed2f # v0.0.89
+    hooks:
+      - id: ty
+        args: [--isolated]
+
+  - repo: local
+    hooks:
+      - id: shellcheck
+        name: ShellCheck
+        description: "Shell script linter: https://www.shellcheck.net/"
+        entry: shellcheck
+        language: system
+        types: [text]
+        types_or: [bash, bats, shell]
