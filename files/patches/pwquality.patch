@@ -1,0 +1,26 @@
+--- a/etc/security/pwquality.conf
++++ b/etc/security/pwquality.conf
+@@ -12,12 +12,12 @@ minlen = 8
+ #
+ # The maximum credit for having digits in the new password. If less than 0
+ # it is the minimum number of digits in the new password.
+-dcredit = -1
++dcredit = 0
+ #
+ # The maximum credit for having uppercase characters in the new password.
+ # If less than 0 it is the minimum number of uppercase characters in the new
+ # password.
+-ucredit = -1
++ucredit = 0
+ #
+ # The maximum credit for having lowercase characters in the new password.
+ # If less than 0 it is the minimum number of lowercase characters in the new
+@@ -27,7 +27,7 @@ lcredit = -1
+ # The maximum credit for having other characters in the new password.
+ # If less than 0 it is the minimum number of other characters in the new
+ # password.
+-ocredit = -1
++ocredit = 0
+ #
+ # The minimum number of required classes of characters for the new
+ # password (digits, uppercase, lowercase, others).

@@ -1,0 +1,35 @@
+type: dnf
+source: ghcr.io/blue-build/modules@sha256:f1273b17987eed439b0feff77bf4b7f1c734e6f77607dc99c9de9d9070555c7a
+remove:
+  packages:
+    - containerd
+    - docker-buildx
+    - docker-cli
+    - docker-compose
+    - moby-engine
+    - moby-engine-rootless-extras
+
+    - polkit-qt6-1
+    - sway
+    - swaylock
+    - waybar
+    - xdg-desktop-portal-wlr
+
+    - Thunar
+    - dangerzone
+    - foot
+    - nm-connection-editor
+    - pavucontrol
+    - tuned-switcher
+    - xarchiver
+
+install:
+  install-weak-deps: false
+  packages:
+    - niri
+    - xdg-desktop-portal-gnome
+    - xdg-user-dirs
+
+    - alacritty
+    - dms
+    - nautilus

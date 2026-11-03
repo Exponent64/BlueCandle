@@ -4,31 +4,14 @@ modules:
     files:
       - source: system/usr
         destination: /usr
+
       - source: system/etc
         destination: /etc
 
-  - type: dnf
-    source: ghcr.io/blue-build/modules@sha256:f1273b17987eed439b0feff77bf4b7f1c734e6f77607dc99c9de9d9070555c7a
-    remove:
-      packages:
-        - sway
-        - xdg-desktop-portal-wlr
-        - waybar
-        - Thunar
-        - xarchiver
-        - polkit-qt6-1
+      - source: patches
+        destination: /root/patches
 
-    install:
-      install-weak-deps: false
-      packages:
-        - niri
-        - dms
-        - xdg-desktop-portal-gnome
-        - xdg-user-dirs
-        - sddm
-        - alacritty
-        - fuzzel
-        - nautilus
+  - from-file: common/packages.yml
 
   - type: systemd
     source: ghcr.io/blue-build/modules@sha256:f1273b17987eed439b0feff77bf4b7f1c734e6f77607dc99c9de9d9070555c7a
@@ -45,3 +28,8 @@ modules:
 
   - type: signing
     source: ghcr.io/blue-build/modules@sha256:f1273b17987eed439b0feff77bf4b7f1c734e6f77607dc99c9de9d9070555c7a
+
+  - type: script
+    source: ghcr.io/blue-build/modules@sha256:f1273b17987eed439b0feff77bf4b7f1c734e6f77607dc99c9de9d9070555c7a
+    scripts:
+      - apply-patches.sh
