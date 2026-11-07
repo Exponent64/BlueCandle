@@ -34,27 +34,21 @@ remove:
 install:
   install-weak-deps: false
   packages:
+    - alacritty
+    - nautilus
     - niri
     - xdg-desktop-portal-gnome
     - xdg-user-dirs
 
-    - alacritty
-    - nautilus
-
     - dux-gop
     - dux-search
-    - dux-qt-base
 
     - cava
-    - jemalloc
-    - qt6-qtmultimedia
+    - quickshell
 
     - repo: copr:copr.fedorainfracloud.org:duxlabs:dux-repo
       packages:
-        - cli11
-        - cpptrace
         - matugen
-        - quickshell
 
     - repo: copr:copr.fedorainfracloud.org:duxlabs:dms
       packages:
