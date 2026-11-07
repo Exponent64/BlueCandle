@@ -49,6 +49,9 @@ install:
       packages:
         - dux-gop
         - dux-search
+
+        - cli11
+        - cpptrace
         - matugen
         - quickshell
 
