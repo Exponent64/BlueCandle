@@ -2,7 +2,8 @@ type: dnf
 source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
 repos:
   copr:
-    - duxlabs/dms
+    - name: duxlabs/dms
+      chroot: fedora-45-x86_64
 
 remove:
   packages:
