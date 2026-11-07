@@ -40,21 +40,10 @@ install:
     - xdg-desktop-portal-gnome
     - xdg-user-dirs
 
+    - dms
     - dux-gop
     - dux-search
 
     - cava
+    - matugen
     - quickshell
-
-    - repo: copr:copr.fedorainfracloud.org:duxlabs:dux-repo
-      packages:
-        - matugen
-
-    - repo: copr:copr.fedorainfracloud.org:duxlabs:dms
-      packages:
-        - dms
-
-replace:
-  - from-repo: copr:copr.fedorainfracloud.org:duxlabs:dux-repo
-    packages:
-      - quickshell
