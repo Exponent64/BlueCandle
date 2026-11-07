@@ -5,6 +5,9 @@ repos:
     - name: duxlabs/dms
       chroot: fedora-45-x86_64
 
+    - name: duxlabs/dux-repo
+      chroot: fedora-45-x86_64
+
 remove:
   packages:
     - containerd
@@ -36,8 +39,17 @@ install:
     - xdg-user-dirs
 
     - alacritty
-    - quickshell
     - nautilus
+    - qt6-qtmultimedia
+
+    - repo: copr:copr.fedorainfracloud.org:duxlabs:dux-repo
+      packages:
+        - dux-gop
+        - dux-search
+
+        - cava
+        - matugen
+        - quickshell
 
     - repo: copr:copr.fedorainfracloud.org:duxlabs:dms
       packages:
