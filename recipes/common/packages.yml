@@ -38,6 +38,6 @@ install:
     - quickshell
     - nautilus
 
-  - repo: copr:copr.fedorainfracloud.org:duxlabs:dms
-    packages:
-      - dms
+    - repo: copr:copr.fedorainfracloud.org:duxlabs:dms
+      packages:
+        - dms
