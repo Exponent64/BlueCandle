@@ -40,14 +40,15 @@ install:
 
     - alacritty
     - nautilus
+
+    - cava
+    - jemalloc
     - qt6-qtmultimedia
 
     - repo: copr:copr.fedorainfracloud.org:duxlabs:dux-repo
       packages:
         - dux-gop
         - dux-search
-
-        - cava
         - matugen
         - quickshell
 
