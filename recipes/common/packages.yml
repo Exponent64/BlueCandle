@@ -41,15 +41,16 @@ install:
     - alacritty
     - nautilus
 
+    - dux-gop
+    - dux-search
+    - dux-qt-base
+
     - cava
     - jemalloc
     - qt6-qtmultimedia
 
     - repo: copr:copr.fedorainfracloud.org:duxlabs:dux-repo
       packages:
-        - dux-gop
-        - dux-search
-
         - cli11
         - cpptrace
         - matugen
