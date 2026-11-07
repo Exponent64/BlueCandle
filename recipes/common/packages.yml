@@ -53,3 +53,8 @@ install:
     - repo: copr:copr.fedorainfracloud.org:duxlabs:dms
       packages:
         - dms
+
+replace:
+  - from-repo: copr:copr.fedorainfracloud.org:duxlabs:dux-repo
+    packages:
+      - quickshell
