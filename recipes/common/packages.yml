@@ -39,6 +39,7 @@ install:
     - niri
     - xdg-desktop-portal-gnome
     - xdg-user-dirs
+    - ly
 
     - dms
     - dux-gop
