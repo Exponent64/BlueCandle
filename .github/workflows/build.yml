@@ -8,8 +8,8 @@ on:
         "00 06 * * *"
 
   push:
-    branches-ignore:
-      - "dependabot/**"
+    branches:
+      - main
     paths-ignore:
       - "**.md"
 
