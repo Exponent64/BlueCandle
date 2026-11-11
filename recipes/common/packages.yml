@@ -9,6 +9,7 @@ repos:
       chroot: fedora-45-x86_64
 
 remove:
+  auto-remove: true
   packages:
     - containerd
     - docker-buildx
@@ -30,12 +31,19 @@ remove:
     - pavucontrol
     - tuned-switcher
     - xarchiver
+    - dunst
+    - rofi
+
+    - system-config-printer
+    - system-config-printer-libs
+    - system-config-printer-udev
+
+    - blueman
+    - bluez
 
 install:
   install-weak-deps: false
   packages:
-    - alacritty
-    - nautilus
     - niri
     - xdg-desktop-portal-gnome
     - xdg-user-dirs
@@ -43,8 +51,9 @@ install:
 
     - dms
     - dux-gop
-    - dux-search
 
-    - cava
     - matugen
     - quickshell
+
+    - alacritty
+    - nautilus
