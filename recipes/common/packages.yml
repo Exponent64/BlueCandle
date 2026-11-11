@@ -50,8 +50,6 @@ install:
     - ly
 
     - dms
-    - dux-gop
-
     - matugen
     - quickshell
 
