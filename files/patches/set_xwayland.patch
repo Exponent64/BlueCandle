@@ -1,5 +1,5 @@
---- a/desktop/usr/libexec/secureblue/set_xwayland.py
-+++ b/desktop/usr/libexec/secureblue/set_xwayland.py
+--- a/usr/libexec/secureblue/set_xwayland.py
++++ b/usr/libexec/secureblue/set_xwayland.py
 @@ -26,12 +26,14 @@ XWAYLAND_OVERRIDE_FILES: Final[dict[Image, str]] = {
      Image.SILVERBLUE: "/etc/systemd/user/org.gnome.Shell@user.service.d/override.conf",
      Image.KINOITE: "/etc/systemd/user/plasma-kwin_wayland.service.d/override.conf",
