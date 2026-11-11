@@ -23,6 +23,7 @@ jobs:
   build:
     name: Build BlueCandle
     runs-on: ubuntu-latest
+    environment: Build
     if: github.triggering_actor == 'exponent64' || github.event_name == 'schedule' || github.event_name == 'push'
     permissions:
       contents: read # Needed to pull the repo for the build
