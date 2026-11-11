@@ -1,0 +1,3 @@
+include optional=true "/etc/niri/config.kdl"
+include optional=true "~/.config/niri/config.kdl"
+include optional=true "/etc/niri/config.d/noxwayland.kdl"

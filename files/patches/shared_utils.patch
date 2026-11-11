@@ -1,0 +1,18 @@
+--- a/usr/libexec/secureblue/shared/utils.py
++++ b/usr/libexec/secureblue/shared/utils.py
+@@ -82,6 +82,7 @@ class Image(enum.Enum):
+     KINOITE = enum.auto()
+     SERICEA = enum.auto()
+     COSMIC = enum.auto()
++    BLUECANDLE = enum.auto()
+     COREOS = enum.auto()
+     IOT = enum.auto()
+
+@@ -102,6 +103,7 @@ class Image(enum.Enum):
+             cls.KINOITE: ("kinoite", "kde", "plasma"),
+             cls.SERICEA: ("sericea", "sway"),
+             cls.COSMIC: ("cosmic",),
++            cls.BLUECANDLE: ("bluecandle",),
+             cls.COREOS: ("securecore", "coreos"),
+             cls.IOT: ("iot",),
+         }

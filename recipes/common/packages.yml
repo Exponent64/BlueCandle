@@ -23,6 +23,7 @@ remove:
     - swaylock
     - waybar
     - xdg-desktop-portal-wlr
+    - tumbler
 
     - Thunar
     - dangerzone
@@ -33,6 +34,7 @@ remove:
     - xarchiver
     - dunst
     - rofi
+    - grim
 
     - system-config-printer
     - system-config-printer-libs

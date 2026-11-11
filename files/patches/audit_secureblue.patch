@@ -1,0 +1,12 @@
+--- a/usr/libexec/secureblue/audit_secureblue.py
++++ b/usr/libexec/secureblue/audit_secureblue.py
+@@ -902,6 +902,9 @@ def audit_xwayland(state):
+         case Image.SERICEA:
+             de = _("Sway")
+             override_path = Path("/etc/sway/config.d/99-noxwayland.conf")
++        case Image.BLUECANDLE:
++            de = _("niri")
++            override_path = Path("/etc/niri/config.d/noxwayland.kdl")
+         case _:
+             return
+     if override_path.is_file():
