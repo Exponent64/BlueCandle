@@ -19,4 +19,4 @@ sed -i --sandbox "s|^BUG_REPORT_URL=.*|BUG_REPORT_URL=\"${BUG_SUPPORT_URL}\"|" /
 sed -i --sandbox "s|^CPE_NAME=\"cpe:/o:secureblue:secureblue|CPE_NAME=\"cpe:/o:Exponent64:BlueCandle|" /usr/lib/os-release
 sed -i --sandbox "s|^DEFAULT_HOSTNAME=.*|DEFAULT_HOSTNAME=${IMAGE_PRETTY_NAME}|" /usr/lib/os-release
 sed -i --sandbox "s|^ID=secureblue|ID=${IMAGE_PRETTY_NAME,}|" /usr/lib/os-release
-sed -i --sandbox "s|^IMAGE_ID=sericea|IMAGE_ID=${IMAGE_PRETTY_NAME}|" /usr/lib/os-release
+sed -i --sandbox "s|^IMAGE_ID=\"sericea|IMAGE_ID=\"${IMAGE_PRETTY_NAME}|" /usr/lib/os-release
