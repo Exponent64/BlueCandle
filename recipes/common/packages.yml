@@ -8,21 +8,6 @@ repos:
     - name: duxlabs/dux-repo
       chroot: fedora-45-x86_64
 
-install:
-  install-weak-deps: false
-  packages:
-    - niri
-    - xdg-desktop-portal-gnome
-    - xdg-user-dirs
-    - ly
-
-    - dms
-    - dux-files
-    - matugen
-    - quickshell
-
-    - alacritty
-
 remove:
   auto-remove: true
   packages:
@@ -58,3 +43,19 @@ remove:
 
     - blueman
     - bluez
+    
+install:
+  install-weak-deps: false
+  packages:
+    - niri
+    - xdg-desktop-portal-gnome
+    - xdg-user-dirs
+    - ly
+
+    - dms
+    - dux-files
+    - matugen
+    - quickshell
+
+    - alacritty
+    - qt6ct
