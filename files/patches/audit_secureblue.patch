@@ -1,6 +1,14 @@
 --- a/usr/libexec/secureblue/audit_secureblue.py
 +++ b/usr/libexec/secureblue/audit_secureblue.py
-@@ -902,6 +902,9 @@ def audit_xwayland(state):
+@@ -14,6 +14,7 @@ import configparser
+ import filecmp
+ import getpass
+ import glob
++import json
+ import os
+ import signal
+ import subprocess
+@@ -902,6 +903,9 @@ def audit_xwayland(state):
          case Image.SERICEA:
              de = _("Sway")
              override_path = Path("/etc/sway/config.d/99-noxwayland.conf")
@@ -10,3 +18,15 @@
          case _:
              return
      if override_path.is_file():
+@@ -956,6 +960,11 @@ def audit_thumbnailing(state):
+                 _("Ensuring thumbnailing is disabled for {0}").format(de), status, notes=note
+             )
+             return
++        case Image.BLUECANDLE:
++            de = _("niri")
++            dfiles_file = get_config_dir() / "dms/ui-settings.json"
++            with open(dfiles_file) as dfiles_config:
++                thumbnailing_disabled = not json.load(dfiles_config).get("thumbnails")
+         case _:
+             return
+ 
