@@ -52,8 +52,8 @@ install:
     - ly
 
     - dms
+    - dux-files
     - matugen
     - quickshell
 
     - alacritty
-    - nautilus

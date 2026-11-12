@@ -7,7 +7,7 @@
 +    BLUECANDLE = enum.auto()
      COREOS = enum.auto()
      IOT = enum.auto()
-
+ 
 @@ -102,6 +103,7 @@ class Image(enum.Enum):
              cls.KINOITE: ("kinoite", "kde", "plasma"),
              cls.SERICEA: ("sericea", "sway"),
@@ -16,3 +16,12 @@
              cls.COREOS: ("securecore", "coreos"),
              cls.IOT: ("iot",),
          }
+@@ -265,6 +267,8 @@ def logout(prompt: str | None = None) -> None:
+             )
+         case Image.SILVERBLUE:
+             subprocess.run(["/usr/bin/gnome-session-quit", "--logout"], check=True)
++        case Image.BLUECANDLE:
++            subprocess.run(["/usr/bin/niri", "msg", "action", "quit", "--skip-confirmation"], check=True)
+         case _:
+             user = command_stdout("/usr/bin/whoami")
+             subprocess.run(["/usr/bin/loginctl", "terminate-user", user], check=True)
