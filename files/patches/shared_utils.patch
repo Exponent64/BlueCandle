@@ -7,7 +7,7 @@
 +    BLUECANDLE = enum.auto()
      COREOS = enum.auto()
      IOT = enum.auto()
- 
+
 @@ -102,6 +103,7 @@ class Image(enum.Enum):
              cls.KINOITE: ("kinoite", "kde", "plasma"),
              cls.SERICEA: ("sericea", "sway"),
