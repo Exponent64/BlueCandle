@@ -24,7 +24,7 @@
              return
 +        case Image.BLUECANDLE:
 +            de = _("niri")
-+            dfiles_file = get_config_dir() / "dms/ui-settings.json"
++            dfiles_file = get_config_dir() / "dfiles/ui-settings.json"
 +            with open(dfiles_file) as dfiles_config:
 +                thumbnailing_disabled = not json.load(dfiles_config).get("thumbnails")
          case _:
