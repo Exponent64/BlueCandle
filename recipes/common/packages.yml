@@ -59,4 +59,3 @@ install:
 
     - alacritty
     - qt6ct
-    - qt5ct
