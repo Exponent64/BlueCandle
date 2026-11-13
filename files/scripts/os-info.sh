@@ -2,13 +2,14 @@
 
 set -euo pipefail
 
+pwd
 IMAGE_PRETTY_NAME="bluecandle"
-IMAGE_LIKE="fedora"
 HOME_URL="https://github.com/Exponent64/BlueCandle"
 DOCUMENTATION_URL="https://github.com/Exponent64/BlueCandle/tree/main/docs"
 SUPPORT_URL="https://github.com/Exponent64/BlueCandle/issues"
 BUG_SUPPORT_URL="https://github.com/Exponent64/BlueCandle/issues"
 
+pwd
 sed -i --sandbox "s|^VARIANT_ID=.*|VARIANT_ID=${IMAGE_NAME}|" /usr/lib/os-release
 sed -i --sandbox "s|^PRETTY_NAME=.*|PRETTY_NAME=\"BlueCandle (powered by secureblue)\"|" /usr/lib/os-release
 sed -i --sandbox "s|^NAME=.*|NAME=\"BlueCandle\"|" /usr/lib/os-release
@@ -20,3 +21,4 @@ sed -i --sandbox "s|^CPE_NAME=\"cpe:/o:secureblue:secureblue|CPE_NAME=\"cpe:/o:E
 sed -i --sandbox "s|^DEFAULT_HOSTNAME=.*|DEFAULT_HOSTNAME=${IMAGE_PRETTY_NAME}|" /usr/lib/os-release
 sed -i --sandbox "s|^ID=secureblue|ID=${IMAGE_PRETTY_NAME,}|" /usr/lib/os-release
 sed -i --sandbox "s|^IMAGE_ID=\"sericea|IMAGE_ID=\"${IMAGE_PRETTY_NAME}|; s|-hardened\"$|\"|" /usr/lib/os-release
+pwd
