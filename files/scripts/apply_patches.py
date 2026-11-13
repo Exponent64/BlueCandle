@@ -18,7 +18,7 @@ def main() -> int:
 
     try:
         for patch in sorted(patches_dir.glob("*.patch")):
-            run(["/usr/bin/patch", *patch_args, "<", patch], check=True)
+            run(["/usr/bin/patch", *patch_args,  f"--input={patch}"], check=True)
 
         rmtree(patches_dir)
 
