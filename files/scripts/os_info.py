@@ -1,3 +1,5 @@
+#!/usr/bin/python3 -I
+
 import sys
 from os import environ
 from pathlib import Path
