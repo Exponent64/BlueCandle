@@ -37,8 +37,7 @@ modules:
   - type: script
     source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
     scripts:
-      - apply-patches.sh
-      - os-info.sh
+      - run-scripts.sh
 
   - type: signing
     source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
