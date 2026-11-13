@@ -1,0 +1,45 @@
+--- a/etc/ly/config.ini
++++ b/etc/ly/config.ini
+@@ -45,7 +45,7 @@ asterisk = *
+ 
+ # The number of failed authentications before a special animation is played... ;)
+ # If set to 0, the animation will never be played
+-auth_fails = 10
++auth_fails = 5
+ 
+ # Automatic login configuration
+ # This feature allows Ly to automatically log in a user without password prompt.
+@@ -369,7 +369,7 @@ setup_cmd = /bin/sh /etc/ly/setup.sh
+ 
+ # Show the shell session in the session list
+ # If false, the shell session will be hidden
+-shell = true
++shell = false
+ 
+ # Specifies the key combination used for showing the password
+ # If null, the keybind is disabled and isn't shown
+@@ -388,7 +388,7 @@ text_in_center = false
+ 
+ # If true, user will need to manually type username instead of selecting from the list
+ # of discovered users
+-type_username = false
++type_username = true
+ 
+ # Default vi mode
+ # normal   -> normal mode
+@@ -418,13 +418,13 @@ xauth_cmd = /usr/bin/xauth
+ 
+ # xinitrc
+ # If null, the xinitrc session will be hidden
+-xinitrc = ~/.xinitrc
++xinitrc = null
+ 
+ # Xorg desktop environments
+ # You can specify multiple directories,
+ # e.g. /usr/share/xsessions:/usr/local/share/xsessions
+ # If null, X11 sessions will not be shown
+-xsessions = /usr/share/xsessions
++xsessions = null
+ 
+ # Custom Commands and Labels:
+ # The following examples below give an outline for setting up custom commands and labels.
