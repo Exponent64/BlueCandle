@@ -24,5 +24,19 @@
                 ".github/workflows/**.yml",
             ],
         },
+
+        {
+            enabled: false,
+            matchDepTypes: ["uses-with"],
+            matchPackageNames: ["sigstore/cosign"],
+            matchFileNames: [".github/workflows/shared-runner-setup/action.yml"]
+        },
+
+        {
+            enabled: false,
+            matchDepTypes: ["workflow"],
+            matchPackageNames: ["slsa-framework/actions"],
+            matchFileNames: [".github/workflows/build-one-recipe.yml"]
+        },
     ],
 }
