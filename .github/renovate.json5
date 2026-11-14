@@ -1,6 +1,7 @@
 {
-    extends: ["config:best-practices"],
+    extends: ["config:best-practices", "group:all"],
     minimumReleaseAge: "3 days",
+    prHourlyLimit: 10,
     customManagers: [
         {
             customType: "regex",
