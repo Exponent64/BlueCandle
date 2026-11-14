@@ -30,7 +30,7 @@ concurrency:
 jobs:
   bluebuild:
     name: Build BlueCandle
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     environment: Build
 
     outputs:

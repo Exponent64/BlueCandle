@@ -26,7 +26,7 @@ concurrency:
 jobs:
   push-attestation:
     name: Push provenance attestation
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       packages: write # To push attestation to GHCR
     steps:

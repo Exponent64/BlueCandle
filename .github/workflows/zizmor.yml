@@ -22,7 +22,7 @@ concurrency:
 jobs:
   zizmor:
     name: Zizmor
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       security-events: write # Write findings to github
     steps:
