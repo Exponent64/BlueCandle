@@ -38,7 +38,7 @@ runs:
       uses: sigstore/cosign-installer@faadad0cce49287aee09b3a48701e75088a2c6ad # v4.0.0
       if: ${{ inputs.needs_cosign == 'true' }}
       with:
-        cosign-release: "v2.6.0"
+        cosign-release: "v2.6.5"
 
     - name: Install oras
       if: ${{ inputs.needs_slsa_oras == 'true' }}
