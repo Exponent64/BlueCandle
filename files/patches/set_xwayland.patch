@@ -1,6 +1,14 @@
 --- a/usr/libexec/secureblue/set_xwayland.py
 +++ b/usr/libexec/secureblue/set_xwayland.py
-@@ -26,12 +26,14 @@ XWAYLAND_OVERRIDE_FILES: Final[dict[Image, str]] = {
+@@ -1,6 +1,7 @@
+ #!/usr/bin/python3 -Es
+ 
+ # SPDX-FileCopyrightText: Copyright 2025-2026 The Secureblue Authors
++# SPDX-FileCopyrightText: Copyright 2026 Exponent64
+ #
+ # SPDX-License-Identifier: Apache-2.0
+ 
+@@ -26,12 +27,14 @@ XWAYLAND_OVERRIDE_FILES: Final[dict[Image, str]] = {
      Image.SILVERBLUE: "/etc/systemd/user/org.gnome.Shell@user.service.d/override.conf",
      Image.KINOITE: "/etc/systemd/user/plasma-kwin_wayland.service.d/override.conf",
      Image.SERICEA: "/etc/sway/config.d/99-noxwayland.conf",

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: Copyright 2026 Exponent64
+#
+# SPDX-License-Identifier: Apache-2.0
+
 name: bluecandle-nvidia
 
 description: "nvidia"

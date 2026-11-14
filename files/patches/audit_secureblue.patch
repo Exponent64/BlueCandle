@@ -1,6 +1,14 @@
 --- a/usr/libexec/secureblue/audit_secureblue.py
 +++ b/usr/libexec/secureblue/audit_secureblue.py
-@@ -14,6 +14,7 @@ import configparser
+@@ -1,6 +1,7 @@
+ #!/usr/bin/python3 -Es
+ 
+ # SPDX-FileCopyrightText: Copyright 2025-2026 The Secureblue Authors
++# SPDX-FileCopyrightText: Copyright 2026 Exponent64
+ #
+ # SPDX-License-Identifier: Apache-2.0
+ 
+@@ -14,6 +15,7 @@ import configparser
  import filecmp
  import getpass
  import glob
@@ -8,7 +16,7 @@
  import os
  import signal
  import subprocess
-@@ -902,6 +903,9 @@ def audit_xwayland(state):
+@@ -902,6 +904,9 @@ def audit_xwayland(state):
          case Image.SERICEA:
              de = _("Sway")
              override_path = Path("/etc/sway/config.d/99-noxwayland.conf")
@@ -18,7 +26,7 @@
          case _:
              return
      if override_path.is_file():
-@@ -956,6 +960,11 @@ def audit_thumbnailing(state):
+@@ -956,6 +961,11 @@ def audit_thumbnailing(state):
                  _("Ensuring thumbnailing is disabled for {0}").format(de), status, notes=note
              )
              return
