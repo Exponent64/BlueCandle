@@ -1,0 +1,32 @@
+diff --git a/files/system/usr/libexec/secureblue/verify-provenance b/files/system/usr/libexec/secureblue/verify-provenance
+index 10751e1b..2216191e 100755
+--- a/files/system/usr/libexec/secureblue/verify-provenance
++++ b/files/system/usr/libexec/secureblue/verify-provenance
+@@ -1,6 +1,7 @@
+ #!/usr/bin/bash
+ 
+ # SPDX-FileCopyrightText: Copyright 2025-2026 The Secureblue Authors
++# SPDX-FileCopyrightText: Copyright 2026 Exponent64
+ #
+ # SPDX-License-Identifier: Apache-2.0
+ 
+@@ -22,8 +23,8 @@ if [[ -z "${image_ref}" ]]; then
+ fi
+ 
+ case "${image_ref}" in
+-ghcr.io/secureblue/*)
+-    expected_source='https://github.com/secureblue/secureblue'
++ghcr.io/exponent64/*)
++    expected_source='https://github.com/Exponent64/BlueCandle'
+     ;;
+ *)
+     printf 'WARNING: Unknown image reference "%s"; unable to check provenance.\n' "${image_ref}"
+@@ -43,7 +44,7 @@ printf 'Verifying SLSA v1 Level 3 build provenance for:\n  %s\n' "${image_ref}"
+ image_tag="${image_ref##*:}"
+ case "${image_tag}" in
+ latest | latest-uki | uki)
+-    branch='live'
++    branch='main'
+     ;;
+ br-*)
+     branch="${image_tag%-uki}"
