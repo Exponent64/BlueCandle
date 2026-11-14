@@ -1,7 +1,5 @@
-diff --git a/files/system/usr/libexec/secureblue/verify-provenance b/files/system/usr/libexec/secureblue/verify-provenance
-index 10751e1b..2216191e 100755
---- a/files/system/usr/libexec/secureblue/verify-provenance
-+++ b/files/system/usr/libexec/secureblue/verify-provenance
+--- a/usr/libexec/secureblue/verify-provenance
++++ b/usr/libexec/secureblue/verify-provenance
 @@ -1,6 +1,7 @@
  #!/usr/bin/bash
  
