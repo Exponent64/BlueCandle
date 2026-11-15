@@ -9,6 +9,9 @@ description: "nvidia"
 base-image: ghcr.io/secureblue/sericea-nvidia-hardened
 image-version: latest
 
+cosign-version: none
+nushell-version: none
+
 platforms:
   - linux/amd64
 
