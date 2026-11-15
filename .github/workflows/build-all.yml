@@ -37,6 +37,7 @@ jobs:
     uses: $/.github/workflows/build-one-recipe.yml
     with:
       recipe: general/recipe-main.yml
+      rechunk: true
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
 
@@ -52,6 +53,7 @@ jobs:
     uses: $/.github/workflows/build-one-recipe.yml
     with:
       recipe: general/recipe-nvidia.yml
+      rechunk: true
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
 
@@ -67,5 +69,6 @@ jobs:
     uses: $/.github/workflows/build-one-recipe.yml
     with:
       recipe: general/recipe-nvidia-open.yml
+      rechunk: true
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
