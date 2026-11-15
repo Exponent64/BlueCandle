@@ -1,0 +1,17 @@
+{
+  "policy_version": 1,
+  "disable_registries": true,
+
+  "disable_custom_lock_pam": true,
+  "disable_lock_ipc_unlock": true,
+  "disable_logind_unlock": true,
+  "disable_settings_ipc_set": true,
+  "disable_user_plugins": true,
+
+  "lock_settings": {
+    "customPowerActionLock": "",
+    "lockBeforeSuspend": true,
+    "loginctlLockIntegration": true,
+    "maxFprintTries": 5
+  }
+}
