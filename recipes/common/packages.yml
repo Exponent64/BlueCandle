@@ -39,6 +39,7 @@ remove:
     - xarchiver
     - dunst
     - rofi
+    - rofi-themes
     - grim
 
     - system-config-printer
