@@ -1,5 +1,9 @@
 #!/usr/bin/python3 -I
 
+# SPDX-FileCopyrightText: Copyright 2026 Exponent64
+#
+# SPDX-License-Identifier: Apache-2.0
+
 import sys
 from os import environ
 from pathlib import Path
@@ -39,7 +43,6 @@ def main() -> int:
         os_info_contents: str = os_info_file.read_text()
         for pattern, replacement in substitutions:
             os_info_contents = sub(pattern, replacement, os_info_contents, flags=MULTILINE)
-
         os_info_file.write_text(os_info_contents)
 
     except (FileNotFoundError, PatternError) as e:

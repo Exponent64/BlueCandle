@@ -1,5 +1,9 @@
 #!/usr/bin/python3 -I
 
+# SPDX-FileCopyrightText: Copyright 2026 Exponent64
+#
+# SPDX-License-Identifier: Apache-2.0
+
 import sys
 from pathlib import Path
 from shutil import rmtree
@@ -18,8 +22,7 @@ def main() -> int:
 
     try:
         for patch in sorted(patches_dir.glob("*.patch")):
-            run(["/usr/bin/patch", *patch_args,  f"--input={patch}"], check=True)
-
+            run(["/usr/bin/patch", *patch_args, f"--input={patch}"], check=True)
         rmtree(patches_dir)
 
     except (CalledProcessError, FileNotFoundError) as e:

@@ -9,7 +9,7 @@ repos:
     - name: duxlabs/dms
       chroot: fedora-45-x86_64
 
-    - name: duxlabs/dux-repo
+    - name: exponent64/packages
       chroot: fedora-45-x86_64
 
 remove:
@@ -58,9 +58,10 @@ install:
     - ly
 
     - dms
-    - dux-files
     - matugen
+    - qt6ct
     - quickshell
 
     - alacritty
-    - qt6ct
+    - dux-files
+    - yazi
