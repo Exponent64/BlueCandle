@@ -22,13 +22,16 @@ remove:
     - moby-engine
     - moby-engine-rootless-extras
 
+    - orca
     - polkit-qt6-1
     - qt6-qtwebengine
     - sway
+    - swaybg
+    - swayidle
     - swaylock
+    - tumbler
     - waybar
     - xdg-desktop-portal-wlr
-    - tumbler
 
     - Thunar
     - dangerzone
