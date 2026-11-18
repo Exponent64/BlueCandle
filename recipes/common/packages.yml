@@ -66,5 +66,4 @@ install:
     - quickshell
 
     - alacritty
-    - dux-files
     - yazi

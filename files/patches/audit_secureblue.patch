@@ -8,15 +8,15 @@
  #
  # SPDX-License-Identifier: Apache-2.0
  
-@@ -14,6 +15,7 @@ import configparser
- import filecmp
- import getpass
- import glob
-+import json
- import os
+@@ -19,6 +20,7 @@ import platform
  import signal
  import subprocess
-@@ -902,6 +904,9 @@ def audit_xwayland(state):
+ import sys
++import tomllib
+ import traceback
+ from pathlib import Path
+ from typing import Final, assert_never
+@@ -904,6 +906,9 @@ def audit_xwayland(state):
          case Image.SERICEA:
              de = _("Sway")
              override_path = Path("/etc/sway/config.d/99-noxwayland.conf")
@@ -26,15 +26,22 @@
          case _:
              return
      if override_path.is_file():
-@@ -956,6 +961,11 @@ def audit_thumbnailing(state):
+@@ -964,6 +969,18 @@ def audit_thumbnailing(state):
                  _("Ensuring thumbnailing is disabled for {0}").format(de), status, notes=note
              )
              return
 +        case Image.BLUECANDLE:
 +            de = _("niri")
-+            dfiles_file = get_config_dir() / "dfiles/ui-settings.json"
-+            with open(dfiles_file) as dfiles_config:
-+                thumbnailing_disabled = not json.load(dfiles_config).get("thumbnails")
++            yazi_path = get_config_dir() / "yazi/yazi.toml"
++
++            if yazi_path.exists():
++                with open(yazi_path, "rb") as yazi_file:
++                    yazi_config = tomllib.load(yazi_file).get("plugin", {})
++
++                thumbnailing_disabled = (
++                        not yazi_config.get("preloaders", [])
++                        and not yazi_config.get("previewers", [])
++                        )
          case _:
              return
  
