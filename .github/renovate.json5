@@ -1,6 +1,7 @@
 {
     extends: ["config:best-practices", "group:all"],
     minimumReleaseAge: "3 days",
+    minimumReleaseAgeBehaviour: "timestamp-optional",
     prHourlyLimit: 10,
     semanticCommits: "enabled",
     customManagers: [
