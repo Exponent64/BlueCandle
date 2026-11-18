@@ -49,6 +49,9 @@ remove:
     - blueman
     - bluez
 
+    - 7zip
+    - 7zip-standalone-all
+
 install:
   install-weak-deps: false
   packages:
