@@ -14,13 +14,13 @@ repos:
         exclude: "^\\.github/workflows/config/linkspector\\.yml$"
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: c0f278f1254ccc8fb09676bcdb8d847e7db493e5 # v0.17.4
+    rev: ef6cf06c079dd6b299dfc720b0f14400c9d168e1 # v0.17.5
     hooks:
       - id: ruff-check
       - id: ruff-format
 
   - repo: https://github.com/astral-sh/ty-pre-commit
-    rev: f2f06f50bd9eed99488dad7aee9aed711a7d8d3e # v0.0.98
+    rev: adf4d7a4e31d08d5f724660646c3f10e0084348d # v0.0.101
     hooks:
       - id: ty
         args: [--isolated]
