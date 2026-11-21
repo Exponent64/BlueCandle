@@ -48,6 +48,7 @@ remove:
     - system-config-printer
     - system-config-printer-libs
     - system-config-printer-udev
+    - braille-printer-app
 
     - blueman
     - bluez
