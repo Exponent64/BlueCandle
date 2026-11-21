@@ -1,5 +1,5 @@
 {
-    extends: ["config:best-practices", "group:all"],
+    extends: ["config:best-practices"],
     minimumReleaseAge: "3 days",
     minimumReleaseAgeBehaviour: "timestamp-optional",
     prHourlyLimit: 10,
