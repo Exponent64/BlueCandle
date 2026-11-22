@@ -73,5 +73,5 @@ install:
 
 replace:
   - from-repo: copr:copr.fedorainfracloud.org:exponent64:packages
-      packages:
-        - quickshell
+    packages:
+      - quickshell
