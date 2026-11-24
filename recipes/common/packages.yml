@@ -2,64 +2,73 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-type: dnf
-source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
+modules:
+  - type: files
+    source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
+    files:
+      - source: system/usr/share/pki/rpm-gpg
+        destination: /usr/share/pki/rpm-gpg
 
-remove:
-  auto-remove: true
-  packages:
-    - containerd
-    - docker-buildx
-    - docker-cli
-    - docker-compose
-    - moby-engine
-    - moby-engine-rootless-extras
+      - source: system/usr/share/dnf5/repos.d
+        destination: /usr/share/dnf5/repos.d
 
-    - orca
-    - polkit-qt6-1
-    - qt6-qtwebengine
-    - sway
-    - swaybg
-    - swayidle
-    - swaylock
-    - tumbler
-    - waybar
-    - xdg-desktop-portal-wlr
+  - type: dnf
+    source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
+    remove:
+      auto-remove: true
+      packages:
+        - containerd
+        - docker-buildx
+        - docker-cli
+        - docker-compose
+        - moby-engine
+        - moby-engine-rootless-extras
 
-    - Thunar
-    - dangerzone
-    - foot
-    - nm-connection-editor
-    - pavucontrol
-    - tuned-switcher
-    - xarchiver
-    - dunst
-    - rofi
-    - rofi-themes
-    - grim
+        - orca
+        - polkit-qt6-1
+        - qt6-qtwebengine
+        - sway
+        - swaybg
+        - swayidle
+        - swaylock
+        - tumbler
+        - waybar
+        - xdg-desktop-portal-wlr
 
-    - system-config-printer
-    - system-config-printer-libs
-    - system-config-printer-udev
+        - Thunar
+        - dangerzone
+        - foot
+        - nm-connection-editor
+        - pavucontrol
+        - tuned-switcher
+        - xarchiver
+        - dunst
+        - rofi
+        - rofi-themes
+        - grim
 
-    - blueman
-    - bluez
+        - system-config-printer
+        - system-config-printer-libs
+        - system-config-printer-udev
 
-    - 7zip
-    - 7zip-standalone-all
+        - blueman
+        - bluez
 
-install:
-  install-weak-deps: false
-  packages:
-    - niri
-    - xdg-desktop-portal-gnome
-    - xdg-user-dirs
-    - ly
+        - 7zip
+        - 7zip-standalone-all
 
-    - dms
-    - matugen
-    - qt6ct
-    - quickshell
+    install:
+      install-weak-deps: false
+      packages:
+        - niri
+        - xdg-desktop-portal-gnome
+        - xdg-user-dirs
+        - ly
 
-    - alacritty
-    - yazi
+        - dms
+        - matugen
+        - qt6ct
+        - quickshell
+
+        - alacritty
+        - yazi
