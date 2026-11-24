@@ -30,7 +30,7 @@ jobs:
         uses: oras-project/setup-oras@ac735097e22fe643015b0d19645f7c9a69942128 # v2.0.4
         with:
           # renovate: datasource=github-releases depName=oras-project/oras
-          version: 1.3.6
+          version: 1.4.0
 
       - name: Install slsa-verifier
         uses: slsa-framework/actions/install/verifier@3efdf6f2112b1170cb369442620788752df11bca # v0.2.0
