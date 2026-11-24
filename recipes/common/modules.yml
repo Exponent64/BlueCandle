@@ -6,6 +6,17 @@ modules:
   - type: files
     source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
     files:
+      - source: system/usr/share/pki/rpm-gpg
+        destination: /usr/share/pki/rpm-gpg
+
+      - source: system/usr/share/dnf5/repos.d
+        destination: /usr/share/dnf5/repos.d
+
+  - from-file: common/packages.yml
+
+  - type: files
+    source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
+    files:
       - source: system/usr
         destination: /usr
 
@@ -14,8 +25,6 @@ modules:
 
       - source: patches
         destination: /root/patches
-
-  - from-file: common/packages.yml
 
   - type: systemd
     source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
