@@ -23,7 +23,7 @@ modules:
       enabled:
         - ly@tty2.service
       disabled:
-        - kmsconvt@tt23.service
+        - kmsconvt@tty2.service
       masked:
         - kmsconvt@tty2.service
 
