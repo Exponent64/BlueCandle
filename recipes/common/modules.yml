@@ -3,8 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
 modules:
-  - from-file: common/packages.yml
-
   - type: files
     source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94
     files:
@@ -16,6 +14,8 @@ modules:
 
       - source: patches
         destination: /root/patches
+
+  - from-file: common/packages.yml
 
   - type: systemd
     source: ghcr.io/blue-build/modules@sha256:bb9eddf80d21f7dbe9514ed9e1e0ba052a33d4e2c72b940916cd0d5fee7b0f94

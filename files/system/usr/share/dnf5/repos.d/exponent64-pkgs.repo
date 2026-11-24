@@ -1,0 +1,13 @@
+[copr:copr.fedorainfracloud.org:exponent64:packages]
+name=Copr repo for packages owned by exponent64
+baseurl=https://download.copr.fedorainfracloud.org/results/exponent64/packages/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+# gpgkey=https://download.copr.fedorainfracloud.org/results/exponent64/packages/pubkey.gpg
+gpgkey=file:///usr/share/pki/rpm-gpg/exponent64-pkgs-pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+includepkgs=yazi
+auto_import_local_keys=1
