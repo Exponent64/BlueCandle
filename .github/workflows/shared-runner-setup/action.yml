@@ -53,4 +53,4 @@ runs:
       uses: slsa-framework/actions/install/verifier@3efdf6f2112b1170cb369442620788752df11bca # v0.2.0
       with:
         # renovate: datasource=github-releases depName=slsa-framework/verifier
-        version: v0.1.1
+        version: v0.1.2
