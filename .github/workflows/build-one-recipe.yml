@@ -331,7 +331,7 @@ jobs:
     with:
       build-from-source: false
       # renovate: datasource=github-releases depName=slsa-framework/attester
-      version: v0.1.1
+      version: v0.1.2
       watch-jobs: bluebuild
       collect-artifacts: false
       subjects: ${{ needs.bluebuild.outputs.IMAGE_DIGEST }}
