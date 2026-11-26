@@ -24,38 +24,43 @@ modules:
         - moby-engine
         - moby-engine-rootless-extras
 
-        - orca
-        - polkit-qt6-1
         - qt6-qtwebengine
         - sway
         - swaybg
         - swayidle
         - swaylock
-        - tumbler
         - waybar
         - xdg-desktop-portal-wlr
 
-        - Thunar
-        - dangerzone
-        - foot
-        - nm-connection-editor
-        - pavucontrol
-        - tuned-switcher
-        - xarchiver
         - dunst
+        - foot
+        - grim
+        - nano
+        - nano-default-editor
+        - orca
+        - pavucontrol
+        - polkit-qt6-1
         - rofi
         - rofi-themes
-        - grim
+        - tuned-switcher
 
+        - braille-printer-app
         - system-config-printer
         - system-config-printer-libs
         - system-config-printer-udev
 
+        - NetworkManager-openconnect
+        - NetworkManager-openvpn
         - blueman
         - bluez
+        - nm-connection-editor
 
         - 7zip
         - 7zip-standalone-all
+        - Thunar
+        - dangerzone
+        - tumbler
+        - xarchiver
 
     install:
       install-weak-deps: false
