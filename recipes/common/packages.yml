@@ -68,7 +68,6 @@ modules:
         - niri
         - xdg-desktop-portal-gnome
         - xdg-user-dirs
-        - ly
 
         - dms
         - matugen
